@@ -1,0 +1,19 @@
+{
+  "name": "secure-doc-share",
+  "version": "1.0.0",
+  "description": "using HTML, CSS, Javascript and firebase # Secure & Share Govt Documents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@firebase/auth": "^1.10.7",
+    "@firebase/firestore": "^4.7.17",
+    "@firebase/storage": "^0.13.13",
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
+    "firebase": "^11.9.1"
+  }
+}

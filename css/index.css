@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#dashboard {
+  margin-top: 20px;
+}
+
+input, button {
+  padding: 8px;
+  margin: 5px 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Error/Success Messages */
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Preview Styles */
+.preview {
+  margin: 20px 0;
+  min-height: 150px;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-image {
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.pdf-preview {
+  text-align: center;
+  color: #e74c3c;
+}
+
+.pdf-preview i {
+  font-size: 50px;
+}
+
+/* Progress Bar */
+progress {
+  width: 100%;
+  margin: 10px 0;
+}

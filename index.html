@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Doc Share</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- OTP Login Section -->
+  <div id="login-section">
+    <input type="tel" id="phone" placeholder="+91XXXXXXXXXX">
+    <button onclick="sendOTP()">Send OTP</button>
+    <div id="recaptcha-container"></div>
+    <input type="text" id="otp" placeholder="Enter OTP" style="display:none;">
+    <button onclick="verifyOTP()" style="display:none;">Verify</button>
+  </div>
+
+  <!-- Document Upload -->
+  <div id="dashboard" style="display:none;">
+    <input type="file" id="docUpload">
+    <button onclick="handleUpload()">Upload Document</button>
+    
+    <!-- Family Sharing -->
+    <input type="text" id="familyMemberId" placeholder="Family Member's User ID">
+    <button onclick="shareDoc()">Share Document</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/firestore.js"></script>
+
+
+<div id="error-message" class="message"></div>
+<div id="success-message" class="message"></div>
+
+<!-- Document Type Selector -->
+<select id="doc-type">
+  <option value="PAN">PAN Card</option>
+  <option value="Aadhaar">Aadhaar</option>
+  <option value="Passport">Passport</option>
+</select>
+
+<!-- Progress Bar -->
+<progress id="upload-progress" value="0" max="100"></progress>
+
+<!-- Preview Container -->
+<div id="preview-container" class="preview"></div>
+
+<!-- Document Selector (for sharing) -->
+<select id="doc-selector">
+  <!-- Dynamically populated with user's documents -->
+</select>
+
+</body>
+</html>
